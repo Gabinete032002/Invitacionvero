@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #E63946;
+            --secondary: #1D3557;
+            --accent: #A8DADC;
+            --light: #F1FAEE;
+            --dark: #0A192F;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contenedor {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .cine-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        
+        .cine-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .cine-date {
+            font-size: 1.2rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+        }
+        
+        .peliculas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pelicula-item {
+            background: linear-gradient(135deg, #162947 0%, #0A192F 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .pelicula-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            border-color: var(--primary);
+        }
+        
+        .pelicula-poster {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+        }
+        
+        .pelicula-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .pelicula-item:hover .pelicula-poster img {
+            transform: scale(1.05);
+        }
+        
+        .pelicula-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .pelicula-info {
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .pelicula-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--light);
+        }
+        
+        .pelicula-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+        
+        .pelicula-rating {
+            margin-right: 1rem;
+            color: #FFD700;
+        }
+        
+        .pelicula-duration {
+            margin-right: 1rem;
+        }
+        
+        .pelicula-sinopsis {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .pelicula-horarios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .horario-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .horario-btn:hover {
+            background: var(--primary);
+        }
+        
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 3rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-volver i {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-volver:hover {
+            background: #C1121F;
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .cine-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .cine-title {
+                font-size: 2rem;
+            }
+            
+            .pelicula-poster {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="contenedor">
+        <div class="cine-header">
+            <h1 class="cine-title">Cartelera Premium</h1>
+            <div class="cine-date">VIERNES, 28 OCT</div>
+        </div>
+        
+        <div class="peliculas-container">
+            <!-- Película 1 -->
+            <div class="pelicula-item">
+                <div class="pelicula-poster">
+                    <img src="img/OIP (1).jfif.jpg" alt="Midnight in Paris">
+                    <div class="pelicula-badge">ESTRENO</div>
+                </div>
+                <div class="pelicula-info">
+                    <h3 class="pelicula-title">Mi Villano Favorito</h3>
+                    <div class="pelicula-meta">
+                        <span class="pelicula-rating">
+                            <i class="fas fa-star"></i> 4.8
+                        </span>
+                        <span class="pelicula-duration">
+                            <i class="far fa-clock"></i> 1h 30m
+                        </span>
+                        <span>Animada</span>
+                    </div>
+                    <p class="pelicula-sinopsis">En un barrio feliz, una casa negra con césped muerto oculta una guarida secreta. Allí, Gru, junto a su ejército de siervos, planea el mayor atraco de la historia: robar la Luna. Nada lo detiene hasta que tres niñas huérfanas, Margo, Edith y Agnes, ven en él algo inesperado: un padre. Ahora, el mayor villano del mundo enfrenta su mayor desafío.</p>
+                    <div class="pelicula-horarios">
+                        <button class="horario-btn">22:00</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 2 -->
+            <div class="pelicula-item">
+                <div class="pelicula-poster">
+                    <img src="img/Operation-Fortune-Trailer (1).jpg" alt="The Grand Budapest">
+                    <div class="pelicula-badge">POPULAR</div>
+                </div>
+                <div class="pelicula-info">
+                    <h3 class="pelicula-title">Agente Fortune</h3>
+                    <div class="pelicula-meta">
+                        <span class="pelicula-rating">
+                            <i class="fas fa-star"></i> 4.9
+                        </span>
+                        <span class="pelicula-duration">
+                            <i class="far fa-clock"></i> 1h 54m
+                        </span>
+                        <span>Accion</span>
+                    </div>
+                    <p class="pelicula-sinopsis">En esta misión, el superespía Orson Fortune debe rastrear y detener la venta de una mortífera tecnología moderna que maneja el multimillonario corredor de armas Greg Simmonds. Para lograrlo, formará equipo con los mejores operativos del mundo y reclutará a la mayor estrella de cine de Hollywood, Danny Francesco para que lo ayuden en su misión encubierta para salvar el mundo..</p>
+                    <div class="pelicula-horarios">
+                        <button class="horario-btn">23:40</button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 3 -->
+            <div class="pelicula-item">
+                <div class="pelicula-poster">
+                    <img src="img/373a406ef73818030e6500666f04f212.jpg" alt="La La Land">
+                </div>
+                <div class="pelicula-info">
+                    <h3 class="pelicula-title">????????</h3>
+                    <div class="pelicula-meta">
+                        <span class="pelicula-rating">
+                            <i class="fas fa-star"></i> ???
+                        </span>
+                        <span class="pelicula-duration">
+                            <i class="far fa-clock"></i> ?????
+                        </span>
+                        <span>?????</span>
+                    </div>
+                    <p class="pelicula-sinopsis">??????????????????????????????????????????????????????????????????????????.</p>
+                    <div class="pelicula-horarios">
+                        <button class="horario-btn">2:00</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="index.html" class="btn-volver">
+                <i class="fas fa-arrow-left"></i> VOLVER A LA CARTA
+            </a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,716 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón principal */
+.button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover {
+    background: #ff3b2f;
+    transform: scale(1.05);
+}
+
+/* Estilos específicos para los botones en la nueva página */
+#index-buttons.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#index-buttons .button, #index-buttons #closeButton {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    flex: 1 1 auto;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+#index-buttons .button:hover, #index-buttons #closeButton:hover {
+    background: #ff3b2f;
+    transform: scale(1.05);
+}
+
+#index-buttons .close-button {
+    background: #ccc;
+    color: #333;
+}
+
+#index-buttons .close-button:hover {
+    background: #999;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button, #index-buttons .button, #index-buttons #closeButton {
+        padding: 10px 20px;
+        font-size: 1rem;
+        min-width: 120px;
+    }
+}
+
+
+/* Formulario de preferencias */
+.form-container {
+    margin-top: 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.form-container h2 {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group .input-text, .form-group .input-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group .input-text:focus, .form-group .input-textarea:focus {
+    border-color: #ff6f61;
+}
+
+.form-group .input-textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Botón de cerrar */
+.close-button {
+    margin-top: 20px;
+    background: #ccc;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+}
+
+.close-button:hover {
+    background: #999;
+    color: #fff;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .letter h1 {
+        font-size: 1.5rem;
+    }
+
+    .letter p {
+        font-size: 0.9rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group .input-text, .form-group .input-textarea {
+        font-size: 0.9rem;
+    }
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Formulario de preferencias */
+.form-container {
+    margin-top: 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.form-container h2 {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group .input-text, .form-group .input-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group .input-text:focus, .form-group .input-textarea:focus {
+    border-color: #ff6f61;
+}
+
+.form-group .input-textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Grupo de botones */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilos del botón */
+.button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background: #ff3b2f;
+    transform: scale(1.05);
+}
+
+/* Botón de cerrar */
+.close-button {
+    background: #ccc;
+    color: #333;
+}
+
+.close-button:hover {
+    background: #999;
+    color: #fff;
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group .input-text, .form-group .input-textarea {
+        font-size: 0.9rem;
+    }
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #423d3b;
+	color: #363639;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+/* ? ----- PORTADA ----- */
+.portada {
+	width: 100%;
+	background: #423d3b;
+
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: .5s ease-out all;
+}
+
+.portada.oculta {
+	transform: translateY(100%);
+}
+
+.portada .header {
+	margin-bottom: 100px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.portada .header .logotipo {
+	font-size: 50px;
+	font-size: 900;
+	margin-bottom: 20px;
+}
+
+.portada .header .mensaje {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+
+
+/* ? ----- MAIN ----- */
+main {
+	max-width: 1000px;
+	margin: auto;
+	width: 90%;
+	padding: 60px 0;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: left;
+}
+
+
+
+/* ? ----- Cuenta Regresiva ----- */
+#cuenta {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+.simply-section {
+	background: #fff;
+	width: 180px;
+	height: 180px;
+	margin: 0 20px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.simply-amount {
+	display: block;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.simply-word {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+
+/* ? ---------------------------- */
+
+
+
+/* ? ----- REDES SOCIALES ----- */
+.redes-sociales .btn-red-social {
+	padding: 15px 0;
+	display: inline-block;
+	min-width: 120px;
+	border-radius: 5px;
+	background: #FF0000;
+	color: #fff;
+	font-size: 30px;
+	margin: 0 20px;
+	transition: .3s ease all;
+}
+
+.redes-sociales .btn-red-social:hover {
+	box-shadow: 0px 0px 50px 10px rgba(0,0,0,.15);
+}
+/* Contenedor principal */
+.contenedor {
+    background: #fff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px;
+    width: 90%;
+    margin: 20px;
+}
+
+.contenedor p {
+    font-size: 1.1rem;
+    color: black; /* Texto oscuro */
+    line-height: 1.8; /* Espaciado entre líneas */
+    text-align: justify; /* Texto justificado */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 20px;
+    }
+
+    .contenedor p {
+        font-size: 1rem;
+    }
+}
+/* Estilos para la sección de portada */
+.portada .header .logotipo,
+.portada .header .mensaje {
+    color: white; /* Color de texto blanco */
+}
+/* Estilos para el grupo de botones */
+.button-group {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente en el contenedor */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para todos los botones con la clase .button o el ID #closeButton */
+.button, #closeButton {
+    padding: 15px 30px; /* Padding consistente */
+    font-size: 1.2rem; /* Tamaño de fuente consistente */
+    color: #fff; /* Color de texto */
+    background: #ff6f61; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Sin subrayado en enlaces */
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: 300px; /* Ancho máximo para consistencia */
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+.button:hover, #closeButton:hover {
+    background: #ff3b2f; /* Cambia el color de fondo */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Estilos específicos para el botón de cerrar */
+.close-button {
+    background: #ccc; /* Color de fondo diferente */
+    color: #333; /* Color de texto diferente */
+}
+
+.close-button:hover {
+    background: #999; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Cambia el color de texto al pasar el mouse */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button, #closeButton {
+        padding: 10px 20px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        max-width: 250px; /* Ajusta el ancho máximo para pantallas pequeñas */
+    }
+}
+/* Estilos específicos para los botones en la página index.html */
+#index-buttons.button-group {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos para los botones dentro del contenedor #index-buttons */
+#index-buttons .button, #index-buttons #closeButton {
+    padding: 15px 30px; /* Padding consistente */
+    font-size: 1.2rem; /* Tamaño de fuente consistente */
+    color: #fff; /* Color de texto */
+    background: #ff6f61; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Sin subrayado en enlaces */
+    text-align: center; /* Texto centrado */
+    flex: 1 1 auto; /* Permite que los botones crezcan y se ajusten */
+    min-width: 150px; /* Ancho mínimo para evitar que se compriman demasiado */
+    max-width: 200px; /* Ancho máximo para consistencia */
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+#index-buttons .button:hover, #index-buttons #closeButton:hover {
+    background: #ff3b2f; /* Cambia el color de fondo */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Estilos específicos para el botón de cerrar */
+#index-buttons .close-button {
+    background: #ccc; /* Color de fondo diferente */
+    color: #ff3b2f; /* Color de texto diferente */
+}
+
+#index-buttons .close-button:hover {
+    background: #999; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Cambia el color de texto al pasar el mouse */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #index-buttons .button, #index-buttons #closeButton {
+        padding: 10px 20px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        min-width: 120px; /* Ajusta el ancho mínimo para pantallas pequeñas */
+    }
+}
+/* Estilos base para la clase .container */
+.container {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+}
+
+/* Estilos para el título dentro del contenedor */
+.container h1 {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    color: #333333; /* Color de texto oscuro */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para párrafos dentro del contenedor */
+.container p {
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    color: #555555; /* Color de texto gris */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilos para enlaces dentro del contenedor */
+.container a {
+    color: #ff6f61; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.container a:hover {
+    color: #ff3b2f; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para botones dentro del contenedor */
+.container .button {
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #ffffff; /* Color de texto blanco */
+    background-color: #ff6f61; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    display: inline-block; /* Para que no ocupe todo el ancho */
+    text-align: center; /* Centrar el texto */
+}
+
+.container .button:hover {
+    background-color: #ff3b2f; /* Cambia el color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Estilos para imágenes dentro del contenedor */
+.container img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para formularios dentro del contenedor */
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre elementos del formulario */
+}
+
+.container form input,
+.container form textarea {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    outline: none; /* Sin contorno al hacer clic */
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+.container form input:focus,
+.container form textarea:focus {
+    border-color: #ff6f61; /* Cambia el color del borde al hacer clic */
+}
+
+.container form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 150px; /* Altura mínima */
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Menos padding en pantallas pequeñas */
+    }
+
+    .container h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .container p {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .container .button {
+        padding: 10px 20px; /* Menos padding en botones */
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    }
+}
